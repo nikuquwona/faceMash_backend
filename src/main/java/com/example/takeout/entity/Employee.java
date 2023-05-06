@@ -1,4 +1,4 @@
-package com.itheima.reggie.entity;
+package com.example.takeout.entity;
 
 import com.baomidou.mybatisplus.annotation.FieldFill;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -6,7 +6,7 @@ import lombok.Data;
 import java.io.Serializable;
 import java.time.LocalDateTime;
 
-@Data
+@Data // get set
 public class Employee implements Serializable {
 
     private static final long serialVersionUID = 1L;

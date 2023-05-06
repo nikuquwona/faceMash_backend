@@ -1,4 +1,4 @@
-package com.itheima.reggie.common;
+package com.example.takeout.common;
 
 import lombok.Data;
 import java.util.HashMap;
@@ -15,7 +15,7 @@ public class R<T> {
 
     private Map map = new HashMap(); //动态数据
 
-    public static <T> R<T> success(T object) {
+    public static <T> R<T> success(T object) { //声明一个T的意思是用到了T
         R<T> r = new R<T>();
         r.data = object;
         r.code = 1;
@@ -26,6 +26,13 @@ public class R<T> {
         R r = new R();
         r.msg = msg;
         r.code = 0;
+        return r;
+    }
+
+    public static <T> R<T> message(String msg) {
+        R r = new R();
+        r.msg = msg;
+        r.code = 2;
         return r;
     }
 
